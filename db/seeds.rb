@@ -6,10 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Ingredient.create(name: "lemon")
-Ingredient.create(name: "ice")
-Ingredient.create(name: "mint leaves")
-
-5.times  do
-  Cocktail.create(name: Faker::Superhero.name)
-end
+require 'open-uri'
+require 'json'
+    url = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
+    file = open(url).read
+    data = JSON.parse(file)
+    array = data["drinks"]
+    drinks = array.each do |d|
+     Ingredient.create(name: d["strIngredient1"].to_s)
+    end
