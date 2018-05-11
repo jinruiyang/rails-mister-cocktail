@@ -33,6 +33,13 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+gem 'faker'
+gem 'simple_form'
+gem 'figaro'
+gem 'cloudinary'
+gem 'carrierwave', '~> 1.2'
+
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -54,7 +61,3 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rspec-rails', group: [ :test ]
 gem 'rails-controller-testing', group: [ :test ]
-gem 'faker'
-gem 'simple_form'
-gem 'figaro'
-gem 'cloudinary'
