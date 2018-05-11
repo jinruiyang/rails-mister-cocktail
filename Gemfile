@@ -57,3 +57,4 @@ gem 'rails-controller-testing', group: [ :test ]
 gem 'faker'
 gem 'simple_form'
 gem 'figaro'
+gem 'cloudinary'
