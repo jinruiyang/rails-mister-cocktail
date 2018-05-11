@@ -12,6 +12,6 @@ require 'json'
     file = open(url).read
     data = JSON.parse(file)
     array = data["drinks"]
-    drinks = array.each do |d|
+    array.each do |d|
      Ingredient.create(name: d["strIngredient1"].to_s)
     end
